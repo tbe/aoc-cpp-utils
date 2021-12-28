@@ -70,7 +70,7 @@ self containing states, or a node object could be just a wrapper, that gets it's
 
 Have a look in `tests/dijkstra` for such a wrapper example.
 
-The `AoC::Dijkstra` class is a template class, here is an example how to instanciate it:
+The `AoC::Dijkstra` class is a template class, here is an example how to instantiate it:
 
 ```c++
 AoC::Dijkstra dijkstra<Node,uint32_t,10000>(initalNode, 0);
