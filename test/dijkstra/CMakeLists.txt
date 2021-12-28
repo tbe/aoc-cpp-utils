@@ -1,0 +1,3 @@
+add_executable(dijkstra_tests test.cpp)
+target_link_libraries(dijkstra_tests gtest_main aoc_dijkstra)
+gtest_discover_tests(dijkstra_tests)

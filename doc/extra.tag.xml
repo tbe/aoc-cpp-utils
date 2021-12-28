@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<tagfile doxygen_version="1.9.2">
+    <compound kind="concept">
+        <name>std::totally_ordered</name>
+        <filename>cpp/concepts/totally_ordered</filename>
+    </compound>
+    <compound kind="concept">
+        <name>std::convertible_to</name>
+        <filename>cpp/concepts/convertible_to</filename>
+    </compound>
+    <compound kind="concept">
+        <name>std::ranges::range</name>
+        <filename>cpp/ranges/range</filename>
+    </compound>
+    <compound kind="concept">
+        <name>std::movable</name>
+        <filename>cpp/concepts/movable</filename>
+    </compound>
+</tagfile>
