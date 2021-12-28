@@ -1,5 +1,5 @@
 function(add_aoc_executable HEADER CLASS DAY YEAR)
-    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/puzzle.cpp             "#include <puzzle.h>
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/puzzle-${year}-${day}.cpp             "#include <puzzle.h>
 #include \"${CMAKE_CURRENT_SOURCE_DIR}/${HEADER}\"
 
  PUZZLE_MAIN(${YEAR}, ${DAY}, ${CLASS})")
