@@ -34,7 +34,7 @@
  * This macro creates a `main()` function that will handle all input and
  * run the puzzle.
  *
- * \see runPuzzle
+ * @see runPuzzle
  */
 #define PUZZLE_MAIN(year, day, puzzle)                                         \
   int main(int argc, char *argv[]) {                                           \

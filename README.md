@@ -65,8 +65,9 @@ struct exampleNode {
 To be precise, any forward iterable container of std::pair will do. You could even have an own type, as long as it has
 `first` and `second` member variables that return costs and node objects.
 
-I have designed this interface, because it does not make any assumption on how the core problem is solved. It could be either
-self containing states, or a node object could be just a wrapper, that gets it's state from some other object. It doesn't matter.
+I have designed this interface, because it does not make any assumption on how the core problem is solved. It could be
+either self containing states, or a node object could be just a wrapper, that gets it's state from some other object. It
+doesn't matter.
 
 Have a look in `tests/dijkstra` for such a wrapper example.
 
@@ -81,3 +82,39 @@ auto [costs, winner] = dijkstra.solve();
 
 I have a bunch more helper classes for repeating objects, but i wan't to clean them up, bring them to C++20, and write
 some useful tests first before I publish them.
+
+## Test Helper
+
+My Helpers are using googletest. While using this project does not import googletest into your project, it provides two
+helper macros to simplify testing.
+
+A test could look like this:
+
+```c++
+#include <aoc-tests.h>
+#include "my-puzzle.h"
+
+static const char * testdata =  "some\n"
+                                "test\n"
+                                "input";
+
+TEST(day1,Part1) {
+  TEST_PART1(Puzzle, testdata, 1234);
+}
+
+
+TEST(day1,Part2) {
+  TEST_PART2(Puzzle, testdata, 5678);
+}
+```
+
+The input of the macro is, in order:
+- Class name for your puzzle class
+- Test input
+- Expected output
+
+This macro does no fancy stuff. It just creates an `std::istringstream`, passes it to your class and run `Part1()` or `Part2()`.
+It uses the google-test macros to verify the result.
+
+To get the include path of `aoc-tests.h`, you can link against `aoc_test`. While this will add `gtest_main` to your link_libraries,
+you are responsible to provide gtest in your project!
