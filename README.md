@@ -43,6 +43,24 @@ dependencies for linkage, and all the stuff you are expecting to work.
 
 ## Utility classes
 
+### numericGrid
+
+Some puzzles have an input in the form of an numeric grid. For example:
+
+```text
+123456789
+987654321
+111111111
+222222222
+333333333
+```
+
+Often these puzzles involve incrementing or decrementing every member, and accessing neighbours.
+
+While this helper can not provide the neighbour access (for now), it can help with full range changes, searches and others.
+
+Have a look at the documentation of the class, and in the test under `test/util/numericGrid.cpp`.
+
 ### Dijkstra
 
 As many puzzles are basically shorted path issues, and i did the same copy'n'paste all over the place, there is a small

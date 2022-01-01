@@ -1,0 +1,3 @@
+add_executable(util_tests numericGrid.cpp)
+target_link_libraries(util_tests gtest_main aoc_util)
+gtest_discover_tests(util_tests)
